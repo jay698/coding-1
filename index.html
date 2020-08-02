@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+<form name='generate'>
+    Enter Tn:
+    <input type='number' name='Tn'>
+    <br>
+    <input type='button' value='process' onclick="process()">
+    <br>
+    The Fabonacci Output is:
+    <input type='number' name='TnAns'>
+</form>
+
+<script type='text/javascript'>
+
+    function process(){
+        let TnVar = document.generate.Tn.value;
+        let GR1 = [1+Math.sqrt(5)]/2;
+        let GR2 = [1-Math.sqrt(5)]/2;
+        let denom = Math.sqrt(5);
+        let base1 = Math.pow(GR1, TnVar);
+        let base2 = Math.pow(GR2, TnVar);
+        let TnAnsVar = [base1-base2]/denom;
+        document.generate.TnAns.value = TnAnsVar;
+    }
+
+</script>
+</body>
+</html>
